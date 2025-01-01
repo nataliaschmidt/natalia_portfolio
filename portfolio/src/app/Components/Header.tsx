@@ -11,6 +11,7 @@ import React, {
 import Link from "next/link";
 import { IoMenuSharp } from "react-icons/io5";
 import MenuHamburguer from "./MenuHamburguer";
+import ToggleThemeButton from "./ToggleThemeButton";
 
 
 export default function Header(): ReactElement {
@@ -74,7 +75,8 @@ export default function Header(): ReactElement {
   }, [windowSize]);
 
   return (
-    <header className="h-24 w-full flex justify-around items-center md:justify-center gap-10 lg:justify-center">
+    <header className="bg-red h-24 w-full flex justify-around items-center gap-10">
+      <div>Natália Schmidt</div>
       <div ref={menuRef} className=" relative md:hidden flex">
         <button onClick={handleChangeMenuHamburger}>
           <IoMenuSharp className="text-[34px] text-bg-dark dark:text-bg-light" />
@@ -84,7 +86,7 @@ export default function Header(): ReactElement {
         <MenuHamburguer handleChangeMenuHamburger={handleChangeMenuHamburger} />
       ) : null}
 
-      <nav className="gap-8 hidden justify-center items-center text-[24px] md:flex lg:ml-7 text-xl xl:text-2xl">
+      <nav className="gap-8 hidden justify-center items-center md:flex lg:ml-7 ">
         <Link
           className="hover:text-dark-purple hover:dark:text-light-purple transition-colors"
           href="/"
@@ -96,12 +98,6 @@ export default function Header(): ReactElement {
           href=""
         >
           Sobre Mim
-        </Link>
-        <Link
-          className="hover:text-dark-purple hover:dark:text-light-purple transition-colors"
-          href=""
-        >
-          Habilidades
         </Link>
         <Link
           className="hover:text-dark-purple hover:dark:text-light-purple transition-colors"
@@ -117,7 +113,7 @@ export default function Header(): ReactElement {
         </Link>
       </nav>
 
-      {/* <ToggleThemeButton /> */}
+      <ToggleThemeButton />
     </header>
   );
 }
