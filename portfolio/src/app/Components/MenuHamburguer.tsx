@@ -11,9 +11,9 @@ export default function MenuHamburguer({
   handleChangeMenuHamburger,
 }: Props): ReactElement {
   return (
-    <nav className="flex flex-col justify-center items-center absolute top-20 z-50 bg-bg-light dark:bg-bg-dark w-full h-52 text-xl">
+    <nav className="bg-bg-light dark:bg-bg-dark absolute top-20 z-50 flex h-52 w-full flex-col items-center justify-center text-xl">
       <button
-        className="font-bold text-2xl"
+        className="text-2xl font-bold"
         onClick={handleChangeMenuHamburger}
       >
         X

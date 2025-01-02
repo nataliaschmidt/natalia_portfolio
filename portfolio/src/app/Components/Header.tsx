@@ -7,12 +7,17 @@ import React, {
   useRef,
   useState,
 } from "react";
-
+import { Meow_Script } from "next/font/google";
 import Link from "next/link";
 import { IoMenuSharp } from "react-icons/io5";
 import MenuHamburguer from "./MenuHamburguer";
 import ToggleThemeButton from "./ToggleThemeButton";
+import { IoPawSharp } from "react-icons/io5";
 
+const meowScript = Meow_Script({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Header(): ReactElement {
   const [menuHamburguer, setMenuHamburguer] = useState<boolean>(false);
@@ -75,38 +80,33 @@ export default function Header(): ReactElement {
   }, [windowSize]);
 
   return (
-    <header className="bg-red h-24 w-full flex justify-around items-center gap-10">
-      <div>Natália Schmidt</div>
-      <div ref={menuRef} className=" relative md:hidden flex">
-        <button onClick={handleChangeMenuHamburger}>
-          <IoMenuSharp className="text-[34px] text-bg-dark dark:text-bg-light" />
-        </button>
+    <header className="flex h-24 w-full justify-between px-10">
+      <div className="flex items-center gap-2">
+        <IoPawSharp size={32} className="text-primary"/>
+        <span className={`${meowScript.className} text-4xl`}>Natália Schmidt</span>
       </div>
-      {menuHamburguer ? (
-        <MenuHamburguer handleChangeMenuHamburger={handleChangeMenuHamburger} />
-      ) : null}
-
-      <nav className="gap-8 hidden justify-center items-center md:flex lg:ml-7 ">
+     
+      <nav className="hidden absolute left-1/2 top-10 transform -translate-x-1/2 items-center justify-center gap-8 md:flex lg:ml-7">
         <Link
-          className="hover:text-dark-purple hover:dark:text-light-purple transition-colors"
+          className="hover:text-primary  transition-colors"
           href="/"
         >
           Home
         </Link>
         <Link
-          className="hover:text-dark-purple hover:dark:text-light-purple transition-colors"
+          className="hover:text-primary  transition-colors"
           href=""
         >
           Sobre Mim
         </Link>
         <Link
-          className="hover:text-dark-purple hover:dark:text-light-purple transition-colors"
+          className="hover:text-primary transition-colors"
           href="/"
         >
           Projetos
         </Link>
         <Link
-          className="hover:text-dark-purple hover:dark:text-light-purple transition-colors"
+          className="hover:text-primary transition-colors"
           href=""
         >
           Contato
@@ -117,3 +117,13 @@ export default function Header(): ReactElement {
     </header>
   );
 }
+
+
+ {/* <div ref={menuRef} className="relative flex md:hidden">
+        <button onClick={handleChangeMenuHamburger}>
+          <IoMenuSharp className="text-bg-dark dark:text-bg-light text-[34px]" />
+        </button>
+      </div>
+      {menuHamburguer ? (
+        <MenuHamburguer handleChangeMenuHamburger={handleChangeMenuHamburger} />
+      ) : null} */}

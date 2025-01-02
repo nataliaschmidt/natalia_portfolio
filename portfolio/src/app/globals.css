@@ -5,14 +5,87 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #c3d0d6;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --primary: #94a8b3;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
 }
+
+.txt-animado span {
+  position: relative;
+}
+
+.txt-animado span::before {
+  content: "";
+  color: #6c567b;
+  animation: words 12s infinite;
+}
+
+.txt-animado span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: 2px solid #6c567b;
+  right: -10px;
+  opacity: 1;
+  animation:
+    cursor 0.8s infinite,
+    typing 20s steps(20) infinite;
+  width: calc(100% + 15px);
+  background-color: var(--primary);
+}
+
+@keyframes words {
+  0%,
+  33% {
+    content: "Natália Schmidt";
+  }
+  34%,
+  66% {
+    content: "front end";
+  }
+  67%,
+  100% {
+    content: "full stack";
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-left: 2px solid var(--primary);
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  80%,
+  85% {
+    width: calc(100% + 15px);
+  }
+}
+
