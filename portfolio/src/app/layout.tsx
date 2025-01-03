@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "./Components/Header";
 
-const fontPoppins = Poppins({ 
-  subsets: ["latin"], weight:["300", "400", "500", "700"],
+const fontPoppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
   fallback: ["Arial", "sans-serif"],
 });
-
 
 export const metadata: Metadata = {
   title: "Portfolio NKS",
@@ -21,11 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body
-        className={fontPoppins.className}
-      >
-        {children}
-      </body>
+      <ThemeProvider attribute="class">
+        <body className={fontPoppins.className}>
+          <Header />
+          <main>{children}</main>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
