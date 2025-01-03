@@ -54,7 +54,7 @@ export default function Home() {
         <div className="flex justify-between">
           <button
             onClick={handleDownload}
-            className="text-black ml-5 h-14 w-[240px] rounded-3xl bg-[#fc9d9e] p-4 font-medium shadow-lg hover:bg-[#f78e90]"
+            className="ml-5 h-14 w-[240px] rounded-3xl bg-secondary p-4 font-medium text-black shadow-lg hover:bg-[#f78e90]"
           >
             Download currículo
           </button>

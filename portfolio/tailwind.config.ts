@@ -14,6 +14,7 @@ export default {
         foreground: "var(--foreground)",
         primary: "var(--primary)",
         label: "#6c567b",
+        secondary: "#fc9d9e",
       },
     },
   },

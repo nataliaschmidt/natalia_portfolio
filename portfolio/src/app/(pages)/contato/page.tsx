@@ -21,32 +21,32 @@ export default function Contato() {
       >
         Contato
       </h1>
-      <div className="mt-10 flex justify-center items-end gap-20">
+      <div className="mt-10 flex items-end justify-center gap-20">
         <Image
-      className="absolute left-20 bottom-0 md:block hidden w-72 xl:w-96"
+          className="absolute bottom-0 left-20 hidden w-72 md:block xl:w-96"
           src={Avatar}
           alt="Foto de Natália Schmidt"
           width={450}
         />
         <FormContact />
       </div>
-      <div className="flex mt-8 text-5xl md:text-6xl justify-center gap-8">
-            <Link
-              href="https://www.linkedin.com/in/nataliakschmidt/"
-              target="_blank"
-            >
-              <FaLinkedin />
-            </Link>
-            <Link href="https://github.com/nataliaschmidt" target="_blank">
-              <FaGithub />
-            </Link>
-            <Link
-              href="https://api.whatsapp.com/send?phone=5551981554523"
-              target="_blank"
-            >
-              <FaWhatsapp />
-            </Link>
-          </div>
+      <div className="mt-8 flex justify-center gap-8 text-5xl md:text-6xl">
+        <Link
+          href="https://www.linkedin.com/in/nataliakschmidt/"
+          target="_blank"
+        >
+          <FaLinkedin />
+        </Link>
+        <Link href="https://github.com/nataliaschmidt" target="_blank">
+          <FaGithub />
+        </Link>
+        <Link
+          href="https://api.whatsapp.com/send?phone=5551981554523"
+          target="_blank"
+        >
+          <FaWhatsapp />
+        </Link>
+      </div>
     </div>
   );
 }

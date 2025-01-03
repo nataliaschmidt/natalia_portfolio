@@ -39,7 +39,7 @@ export default function FormContact() {
           "Mensagem enviada com sucesso! Em breve retornarei seu contato =)",
         );
       }
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setFormMessage(
         "Ooops, algo deu errado. Por favor, tente novamente mais tarde.",
@@ -122,7 +122,7 @@ export default function FormContact() {
 
         <button
           type="submit"
-          className="h-14 w-[140px] rounded-3xl bg-[#fc9d9e] p-4 font-medium shadow-lg hover:bg-[#f78e90] text-black"
+          className="h-14 w-[140px] rounded-3xl bg-secondary p-4 font-medium text-black shadow-lg hover:bg-[#f78e90]"
         >
           Enviar
         </button>
@@ -133,7 +133,7 @@ export default function FormContact() {
           <div className="shadow-bg-dark dark:shadow-bg-light flex flex-col items-center justify-center gap-y-5 rounded-md border-2 bg-white p-5 shadow-md dark:bg-gray-800">
             <p>{formMessage}</p>
             <button
-              className="h-14 w-[100px] rounded-3xl bg-[#fc9d9e] p-4 font-medium shadow-lg hover:bg-[#f78e90] text-black"
+              className="h-14 w-[100px] rounded-3xl bg-secondary p-4 font-medium text-black shadow-lg hover:bg-[#f78e90]"
               onClick={handleChangeIsFormSent}
             >
               Ok
