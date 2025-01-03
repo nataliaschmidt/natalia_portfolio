@@ -9,7 +9,11 @@ export default function ToggleThemeButton() {
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       className="bg-background p-2 text-foreground"
     >
-      {resolvedTheme === "light" ? <FiMoon size={24} className="text-blue-950"/> : <FiSun size={24} className="text-yellow-500" />}
+      {resolvedTheme === "light" ? (
+        <FiMoon size={24} className="text-blue-950" />
+      ) : (
+        <FiSun size={24} className="text-yellow-500" />
+      )}
     </button>
   );
 }

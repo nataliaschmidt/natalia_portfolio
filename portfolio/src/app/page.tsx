@@ -23,11 +23,11 @@ export default function Home() {
           Desenvolvedora <span></span>
         </div>
         <Link
-    href="www.google.com"
-    className="absolute bottom-20 md:left-44 left-1/2 transform -translate-x-1/2 bg-[#fc9d9e] p-4 rounded-3xl font-medium shadow-lg hover:bg-[#f78e90] w-[240px]"
-  >
-    A inovação começa aqui!
-  </Link>
+          href="www.google.com"
+          className="text-black absolute bottom-20 left-1/2 w-[240px] -translate-x-1/2 transform rounded-3xl bg-[#fc9d9e] p-4 font-medium shadow-lg hover:bg-[#f78e90] md:left-44"
+        >
+          A inovação começa aqui!
+        </Link>
       </div>
       <Image
         className="absolute right-5 top-1/2 hidden -translate-y-1/2 transform md:block xl:top-2/3 xl:w-[550px]"

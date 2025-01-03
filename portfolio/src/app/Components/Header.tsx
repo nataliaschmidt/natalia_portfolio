@@ -82,33 +82,23 @@ export default function Header(): ReactElement {
   return (
     <header className="flex h-24 w-full justify-between px-10">
       <div className="flex items-center gap-2">
-        <IoPawSharp size={32} className="text-primary"/>
-        <span className={`${meowScript.className} text-4xl`}>Natália Schmidt</span>
+        <IoPawSharp size={32} className="text-primary" />
+        <span className={`${meowScript.className} text-4xl`}>
+          Natália Schmidt
+        </span>
       </div>
-     
-      <nav className="hidden absolute left-1/2 top-10 transform -translate-x-1/2 items-center justify-center gap-8 md:flex lg:ml-7">
-        <Link
-          className="hover:text-primary  transition-colors"
-          href="/"
-        >
+
+      <nav className="absolute left-1/2 top-10 hidden -translate-x-1/2 transform items-center justify-center gap-8 md:flex lg:ml-7">
+        <Link className="transition-colors hover:text-primary" href="/">
           Home
         </Link>
-        <Link
-          className="hover:text-primary  transition-colors"
-          href=""
-        >
+        <Link className="transition-colors hover:text-primary" href="/sobre">
           Sobre Mim
         </Link>
-        <Link
-          className="hover:text-primary transition-colors"
-          href="/"
-        >
+        <Link className="transition-colors hover:text-primary" href="/projetos">
           Projetos
         </Link>
-        <Link
-          className="hover:text-primary transition-colors"
-          href=""
-        >
+        <Link className="transition-colors hover:text-primary" href="/contato">
           Contato
         </Link>
       </nav>
@@ -118,12 +108,13 @@ export default function Header(): ReactElement {
   );
 }
 
-
- {/* <div ref={menuRef} className="relative flex md:hidden">
+{
+  /* <div ref={menuRef} className="relative flex md:hidden">
         <button onClick={handleChangeMenuHamburger}>
           <IoMenuSharp className="text-bg-dark dark:text-bg-light text-[34px]" />
         </button>
       </div>
       {menuHamburguer ? (
         <MenuHamburguer handleChangeMenuHamburger={handleChangeMenuHamburger} />
-      ) : null} */}
+      ) : null} */
+}
