@@ -1,8 +1,9 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { ProjectsType } from "../data/projectsList";
+import { CgSpinner } from "react-icons/cg";
 
 type ProjectCardProps = {
   project: ProjectsType;
@@ -14,6 +15,14 @@ export default function ProjectCard({
   setProjectDetail,
 }: ProjectCardProps) {
   const [showImage, setShowImage] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <div
       className="flex h-[350px] w-96 cursor-pointer flex-col gap-4 rounded-xl bg-primary p-4 shadow-lg"
@@ -27,7 +36,11 @@ export default function ProjectCard({
           <FaGithub size={24} />
         </Link>
       </div>
-      {showImage ? (
+      {isLoading ? (
+        <div className="flex h-full items-center justify-center">
+          <CgSpinner size={65} className="animate-spin" />
+        </div>
+      ) : showImage ? (
         <div
           className="back h-56 bg-contain bg-center bg-no-repeat object-contain drop-shadow-2xl"
           style={{ backgroundImage: `url(${project?.image})` }}
