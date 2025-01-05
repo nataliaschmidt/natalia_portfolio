@@ -74,6 +74,9 @@ export default function Projetos() {
               Próximo
             </button>
           </div>
+          <p className="mt-10 hidden text-center text-sm text-gray-500 dark:text-gray-400 md:block">
+            * Clique no card do projeto para visualizar mais detalhes
+          </p>
         </div>
 
         <div className="hidden flex-1 md:block">

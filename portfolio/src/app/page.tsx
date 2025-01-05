@@ -19,11 +19,11 @@ export default function Home() {
         >
           Desenvolvedora {"\n"} Web
         </h1>
-        <div className="txt-animado mt-10 text-lg font-semibold lg:ml-10 lg:text-4xl">
+        <div className="txt-animado mt-20 text-lg font-semibold lg:ml-10 lg:text-4xl">
           Desenvolvedora <span></span>
         </div>
         <Link
-          href="www.google.com"
+          href="/contato"
           className="absolute bottom-20 left-1/2 w-[240px] -translate-x-1/2 transform rounded-3xl bg-[#fc9d9e] p-4 font-medium text-black shadow-lg hover:bg-[#f78e90] md:left-44"
         >
           A inovação começa aqui!

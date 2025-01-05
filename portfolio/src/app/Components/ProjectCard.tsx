@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import { ProjectsType } from "../data/projectsList";
 
 type ProjectCardProps = {
   project: ProjectsType;
-  setProjectDetail: any;
+  setProjectDetail: Dispatch<SetStateAction<ProjectsType>>;
 };
 
 export default function ProjectCard({
