@@ -9,8 +9,8 @@ import React, {
 } from "react";
 import { Meow_Script } from "next/font/google";
 import Link from "next/link";
-import { IoMenuSharp } from "react-icons/io5";
-import MenuHamburguer from "./MenuHamburguer";
+// import { IoMenuSharp } from "react-icons/io5";
+// import MenuHamburguer from "./MenuHamburguer";
 import ToggleThemeButton from "./ToggleThemeButton";
 import { IoPawSharp } from "react-icons/io5";
 
@@ -27,9 +27,9 @@ export default function Header(): ReactElement {
     height: 0,
   });
 
-  const handleChangeMenuHamburger = () => {
-    setMenuHamburguer(!menuHamburguer);
-  };
+  // const handleChangeMenuHamburger = () => {
+  //   setMenuHamburguer(!menuHamburguer);
+  // };
 
   const closeMenu = useCallback(
     (e: MouseEvent) => {
